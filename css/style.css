@@ -1,0 +1,55 @@
+/*** BOX MODEL HACK ***/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*** CLEARFIX FOR FLOATS ***/
+.clearfix::after { 
+   content: "";
+   display: block; 
+   clear: both;
+}
+
+/*** BASE STYLING ***/
+@import url(https://reset5.googlecode.com/hg/reset.min.css);
+body {
+  margin: 0;
+  padding: 0;
+}
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: plum;
+}
+
+/*** HEADER ***/
+header {
+  background: linen;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+.header-logo {
+  display: block;
+  float: left;
+  padding: 5px 20px;
+}
+.header-title {
+  float: left;
+  margin: 0;
+  padding: 0 40px;
+}
+.header-nav {
+  float: right;
+  padding: 0 20px;
+}
+.header-nav li {
+  display: inline;
+  list-style: none;
+  padding: 0 5px;
+}
