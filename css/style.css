@@ -1,21 +1,14 @@
-/*** BOX MODEL HACK ***/
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-/*** CLEARFIX FOR FLOATS ***/
+/*** BASE STYLING ***/
+/* CLEARFIX FOR FLOATS */
 .clearfix::after { 
    content: "";
    display: block; 
    clear: both;
 }
 
-/*** BASE STYLING ***/
+/* SITEWIDE DEFAULTS */
 @import url(https://reset5.googlecode.com/hg/reset.min.css);
-body {
+* {
   margin: 0;
   padding: 0;
 }
@@ -28,20 +21,22 @@ a:hover {
 }
 
 /*** HEADER ***/
+/* DEFAULTS */
 header {
   background: linen;
   height: 60px;
   line-height: 60px;
   white-space: nowrap;
 }
+/* DESKTOP */
 .header-logo {
   display: block;
   float: left;
+  height: 50px;
   padding: 5px 20px;
 }
 .header-title {
   float: left;
-  margin: 0;
   padding: 0 40px;
 }
 .header-nav {
@@ -52,4 +47,28 @@ header {
   display: inline;
   list-style: none;
   padding: 0 5px;
+}
+.header-nav > img {
+  display: none;
+}
+/* MOBILE */
+@media (max-width: 480px) {
+  .header-logo {
+    padding: 5px;
+  }
+  .header-title {
+    display: inline-block;
+    float: none;
+    padding: 0 5px;
+  }
+  .header-nav {
+    padding: 5px;
+  }
+  .header-nav li {
+    display: none;
+  }
+  .header-nav > img {
+    display: inline;
+    background: rgba(100,100,100,.5);
+  }
 }
