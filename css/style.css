@@ -70,6 +70,9 @@ header {
 }
 /* MOBILE */
 @media (max-width: 480px) {
+  header {
+    line-height: 1.8;
+  }
   .header-logo {
     padding: 5px;
   }
@@ -98,6 +101,7 @@ header {
   .header-nav > img {
     display: inline;
     background: rgba(100,100,100,.5);
+    margin: 5px;
   }
 }
 
