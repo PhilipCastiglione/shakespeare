@@ -1,12 +1,4 @@
 /*** BASE STYLING ***/
-/* COLOR PALETTE */
-/* navy blue #004489
-   light-tan #E1E1D6
-   dark-tan #DBDBCE
-   blue-grey #D3D9DF
-   light-grey #989898
-   dark-grey #565656 */
-
 /* CLEARFIX FOR FLOATS */
 .clearfix::after { 
    content: "";
@@ -81,7 +73,6 @@ header {
   }
   .header-title {
     display: inline-block;
-    float: none;
     padding: 0 5px;
     font-size: 2em;
   }
