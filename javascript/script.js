@@ -4,17 +4,18 @@ $(function() {
   function showMenu() {
     event.stopPropagation();
     $(event.target).toggle();
-    $(event.target).nextAll().slideToggle();
+    $('.header-wrapper').slideToggle();
     $('html').on('click', hideMenu);
   }
 
   function hideMenu() {
     $('html').off('click', hideMenu);
     var $icon = $('#menu');
+    var $wrapper = $('.header-wrapper');
     setTimeout(function() {
       $icon.toggle();
     }, 450);
-    $icon.nextAll().slideToggle();
+    $wrapper.slideToggle();
   }
 
   function word() {
